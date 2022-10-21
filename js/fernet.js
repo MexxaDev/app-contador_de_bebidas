@@ -31,7 +31,7 @@ function totalFernet(){
 
     cantidadDeFernetVendidosNumero = cantidadDeFernetVendidosNumero + cantidadParaAgregarFernetNumero;
     cantidadDeFernetVendidos.textContent = cantidadDeFernetVendidosNumero;
-
+    console.log
     cantidadParaAgregarFernet.value = 0;
     
 }
@@ -53,7 +53,7 @@ let mensaje = enviarcaja.href;
 console.log(mensaje);
 
 
-/* mensaje = `https://api.whatsapp.com/send?phone=543496462724&text=Cantidad%20de%20bebidas%20vendidas.%0A%0AFernet:${datoguardado}%20%0AGancia:`; */
+mensaje = `https://api.whatsapp.com/send?phone=543496462724&text=Cantidad%20de%20bebidas%20vendidas.%0A%0AFernet:${cantidadDeFernetVendidosNumero}%20%0AGancia:`;
 
 
 
