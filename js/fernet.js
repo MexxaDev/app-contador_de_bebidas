@@ -40,7 +40,7 @@ function guardarFernet(){
 let fernetGuardado;
 
 fernetGuardado = localStorage.getItem("cantidadFernet");
-
-console.log(fernetGuardado);
-
 cantidadDeFernetVendidos.textContent = fernetGuardado;
+console.log(cantidadDeFernetVendidos.textContent);
+
+
