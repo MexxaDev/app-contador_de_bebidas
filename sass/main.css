@@ -1,0 +1,76 @@
+* {
+  margin: 0px 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  overflow-y: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  height: 300vh;
+}
+body header {
+  background-color: black;
+  color: white;
+}
+body header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 25px;
+  height: 70px;
+}
+body header nav div {
+  margin-right: 15px;
+}
+body main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow-y: hidden;
+}
+body main div {
+  overflow-x: hidden;
+}
+body main .main--contProductos {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0px;
+  margin-left: 3px;
+}
+body main .main--contProductos .main--contProducto__Nombre {
+  width: 200px;
+}
+body main .main--contProductos .main--contProducto__InfoGeneral {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 240px;
+}
+body main .main--contProductos .main--contProducto__InfoGeneral .main--contProducto__infoGeneral--inputCantidad {
+  width: 40px;
+}
+body main .main--contProductos .main--contProducto__InfoGeneral .main--contProducto__btnAgregar {
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  padding: 0.3em 0.5em;
+}
+body main .main--contadorProductos__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 6px;
+  margin-right: 40px;
+}
+body main a {
+  text-align: center;
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  padding: 0.5em 0.5em;
+}/*# sourceMappingURL=main.css.map */

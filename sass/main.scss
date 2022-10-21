@@ -1,0 +1,80 @@
+
+*{
+    margin: 0px 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    overflow-y: hidden;
+}
+body{
+    overflow-x: hidden;
+    header{
+        nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-left: 25px;
+            height: 70px;
+            div{
+                margin-right: 15px;
+            }
+        }
+        background-color: black;
+        color: white;
+    }
+    height: 300vh;
+    main{
+        div{
+            overflow-x: hidden;
+        }
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        overflow-y: hidden;
+        .main--contProductos{
+            width: 100vw;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin: 20px 0px;
+            margin-left: 3px;
+            .main--contProducto__Nombre{
+                width: 200px;
+            }
+            .main--contProducto__InfoGeneral{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-evenly;
+                width: 240px;
+
+                .main--contProducto__infoGeneral--inputCantidad{
+                    width: 40px;
+                }
+                .main--contProducto__btnAgregar{
+                    text-decoration: none;
+                    background-color: black;
+                    color: white;
+                    padding: 0.3em 0.5em;
+                }
+            }
+        }
+        .main--contadorProductos__info{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 15px 6px;
+            margin-right: 40px;
+        }
+    
+    
+    
+        a{
+            text-align: center;
+            text-decoration: none;
+            background-color: black;
+            color: white;
+            padding: 0.5em 0.5em;
+        }
+    }
+}

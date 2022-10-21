@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/ContadorBebidas/sass/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            FOUR PRODUCCIONES
+            <div>
+            <img width="40px" src="/ContadorBebidas/img/logo.png" alt="">
+            </div>
+
+        </nav>
+    </header>
+    <main>
+        <div>
+            <!-- Fernet -->
+            <section class="main--contProductos">
+                <h4 class="main--contProducto__Nombre">Fernet</h4>
+                <article class="main--contProducto__InfoGeneral">
+
+                    <label  class="main--contProducto__infoGeneral--precio" for="">$ 700</label>
+
+                    <p  onclick="removeFernet()" class="main--contProducto__infoGeneral--remove">-</p>
+                    <input id="cantAgregarFernet" class="main--contProducto__infoGeneral--inputCantidad" type="number" value="0"  width="px" min="1" pattern="^[1-9]\d*$">
+                    <p onclick="addFernet()" class="main--contProducto__infoGeneral--add">+</p>
+                    
+                    <a onclick="totalFernet(), guardar()" class="main--contProducto__btnAgregar">Agergar</a>
+                </article>
+            </section>
+
+            <!-- VodkaJugoSpeed -->
+
+            <section class="main--contProductos">
+                <h4 class="main--contProducto__Nombre">Vodka + Jugo/Speed</h4>
+                <article class="main--contProducto__InfoGeneral">
+
+                    <label  class="main--contProducto__infoGeneral--precio" for="">$ 700</label>
+
+                    <p  onclick="removeVodkSpeed()" class="main--contProducto__infoGeneral--remove">-</p>
+                    <input id="cantAgregarVodkaJugoSpeed" class="main--contProducto__infoGeneral--inputCantidad" type="number" value="0"  width="px" min="1" pattern="^[1-9]\d*$">
+                    <p onclick="addVodkSpeed()" class="main--contProducto__infoGeneral--add">+</p>
+                    
+                    <a onclick="totalVodkSpeed(), guardar()" class="main--contProducto__btnAgregar">Agergar</a>
+                </article>
+            </section>
+
+            <!-- Gin Heredero/Gordon -->
+            <section class="main--contProductos">
+                <h4 class="main--contProducto__Nombre">Gin Gordon/Heredero</h4>
+                <article class="main--contProducto__InfoGeneral">
+
+                    <label  class="main--contProducto__infoGeneral--precio" for="">$ 700</label>
+
+                    <p  onclick="removeGin()" class="main--contProducto__infoGeneral--remove">-</p>
+                    <input id="cantAgregarGin" class="main--contProducto__infoGeneral--inputCantidad" type="number" value="0"  width="px" min="1" pattern="^[1-9]\d*$">
+                    <p onclick="addGin()" class="main--contProducto__infoGeneral--add">+</p>
+                    
+                    <a onclick="totalGin(), guardar()" class="main--contProducto__btnAgregar">Agergar</a>
+                </article>
+            </section>
+
+
+            <!-- Vaso Vino + Gaseosa -->
+            <section class="main--contProductos">
+                <h4 class="main--contProducto__Nombre">Vaso Vino + Gaseosa</h4>
+                <article class="main--contProducto__InfoGeneral">
+
+                    <label  class="main--contProducto__infoGeneral--precio" for="">$ 500</label>
+
+                    <p  onclick="removevinoJugo()" class="main--contProducto__infoGeneral--remove">-</p>
+                    <input id="cantAgregarvinoJugo" class="main--contProducto__infoGeneral--inputCantidad" type="number" value="0"  width="px" min="1" pattern="^[1-9]\d*$">
+                    <p onclick="addvinoJugo()" class="main--contProducto__infoGeneral--add">+</p>
+                    
+                    <a onclick="totalvinoJugo(), guardar()" class="main--contProducto__btnAgregar">Agergar</a>
+                </article>
+            </section>
+
+            <!-- Freeze -->
+            <section class="main--contProductos">
+                <h4 class="main--contProducto__Nombre">Freeze</h4>
+                <article class="main--contProducto__InfoGeneral">
+
+                    <label  class="main--contProducto__infoGeneral--precio" for="">$ 700</label>
+
+                    <p  onclick="removeFreeze()" class="main--contProducto__infoGeneral--remove">-</p>
+                    <input id="cantAgregarFreeze" class="main--contProducto__infoGeneral--inputCantidad" type="number" value="0"  width="px" min="1" pattern="^[1-9]\d*$">
+                    <p onclick="addFreeze()" class="main--contProducto__infoGeneral--add">+</p>
+                    
+                    <a onclick="totalFreeze(), guardar()" class="main--contProducto__btnAgregar">Agergar</a>
+                </article>
+            </section>
+        </div>
+        
+        <hr>
+        <section class="main--contadorProductos">
+            <!-- Fernet -->
+            <article class="main--contadorProductos__info">
+                <h4 class="main--contadorProductos__info--tituloProducto">Fernet</h4>
+                <label  id="cantVendidoFernet" class="main--contadorProductos__info--precioProducto" for="">0</label>
+            </article>
+            <!-- VODKA JUGO/SPEED -->
+            <article class="main--contadorProductos__info">
+                <h4 class="main--contadorProductos__info--tituloProducto">Vodka Jugo/Speed</h4>
+                <label  id="cantVendidoVodkaJugoSpeed" class="main--contadorProductos__info--precioProducto" for="">0</label>
+            </article>
+            <!-- GIN GORDON/HEREDERO -->
+            <article class="main--contadorProductos__info">
+                <h4 class="main--contadorProductos__info--tituloProducto">Gin Heredero/Gordon</h4>
+                <label  id="cantVendidoGin" class="main--contadorProductos__info--precioProducto" for="">0</label>
+            </article>
+            <!-- Vino Jugo -->
+            <article class="main--contadorProductos__info">
+                <h4 class="main--contadorProductos__info--tituloProducto">Vaso Vino + Gaseosa</h4>
+                <label  id="cantVendidoVodkavinoJugo" class="main--contadorProductos__info--precioProducto" for="">0</label>
+            </article>
+            <article class="main--contadorProductos__info">
+                <h4 class="main--contadorProductos__info--tituloProducto">Freeze</h4>
+                <label  id="cantVendidoFreeze" class="main--contadorProductos__info--precioProducto" for="">0</label>
+            </article>
+            
+        </section>
+        
+        <a class="enviarcaja" href="">Cerrar caja</a>
+
+    </main>
+
+
+
+
+
+    
+
+
+
+    <script src="/ContadorBebidas/js/fernet.js"></script>
+    <script src="/ContadorBebidas/js/vdkajugospeed.js"></script>
+    <script src="/ContadorBebidas/js/Gin.js"></script>
+    <script src="/ContadorBebidas/js/vinoJugo.js"></script>
+    <script src="/ContadorBebidas/js/freeze.js"></script>
+</body>
+</html>
