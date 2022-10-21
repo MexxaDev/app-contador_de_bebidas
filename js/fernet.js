@@ -34,27 +34,13 @@ function totalFernet(){
     cantidadParaAgregarFernet.value = 0;
     
 }
-
-/* Cuando precionamos el boton "Agregar enviamos al local storage el valor de los productos que vendimos" */
-/* function guardar ( ) {
+function guardarFernet(){
     localStorage.setItem("cantidadFernet", cantidadDeFernetVendidosNumero);
 }
+let fernetGuardado;
 
-datoguardado = localStorage.getItem("cantidadFernet");
+fernetGuardado = localStorage.getItem("cantidadFernet");
 
-cantidadDeFernetVendidos.textContent = datoguardado;
-console.log(datoguardado);
- */
+console.log(fernetGuardado);
 
-
-let enviarcaja = document.querySelector(".enviarcaja");
-let mensaje = enviarcaja.href;
-console.log(mensaje);
-
-
-/* mensaje = `https://api.whatsapp.com/send?phone=543496462724&text=Cantidad%20de%20bebidas%20vendidas.%0A%0AFernet:${cantidadDeFernetVendidosNumero}%20%0AGancia:`; */
-
-
-
-
-enviarcaja.href = mensaje;
+cantidadDeFernetVendidos.textContent = fernetGuardado;
